@@ -1,0 +1,37 @@
+    <div class="container">
+      <nav class="panel">
+        <h1 class="panel-heading">Movies</h1>
+        <% @movies.each do | movie | %>
+          <div class="panel-block">
+            <article class="media">
+              <figure class="media-left">
+                <p class="image is-64x64">
+                  <img src="https://bulma.io/images/placeholders/128x128.png">
+                </p>
+              </figure>
+  
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong> <%= link_to "#{movie.title}", movie_path(movie) %> </strong> <small>2h 31m </small>
+                    <br>
+                     <%= movie.description %>
+                  </p>
+                </div>
+                <% if user_signed_in? %>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-primary">Left</button>
+                      <button type="button" class="btn btn-primary">Middle</button>
+                      <button type="button" class="btn btn-primary">Right</button>
+                    </div>
+                <% end %>
+              </div>
+            </article> 
+          </div>
+        <% end %>
+      </nav>
+    </div>
+
+
+
+
