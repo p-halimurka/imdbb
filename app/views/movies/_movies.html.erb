@@ -16,6 +16,7 @@
                     <strong> <%= link_to "#{movie.title}", movie_path(movie) %> </strong> <small>2h 31m </small>
                     <br>
                      <%= movie.description %>
+                     <p> Rating: <%= rating_for movie, 'rating_value' %></p>
                   </p>
                 </div>
                 <% if user_signed_in? %>

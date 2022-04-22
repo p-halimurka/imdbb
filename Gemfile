@@ -36,6 +36,11 @@ gem 'devise-i18n'
 
 gem 'devise-bootstrap-views', '~> 1.0'
 
+gem 'ratyrate', '~> 1.2.2.alpha'
+
+gem 'jquery-rails', '~> 4.4'
+
+
 
 
 group :development, :test do
