@@ -1,1 +1,2 @@
 <p> <%= @movie.title%> </p>
+<p> Average: <%= RatingCache.find_by(cacheable_id: @movie.id).nil? ? 0.0 : RatingCache.find_by(cacheable_id: @movie.id).avg %></p>

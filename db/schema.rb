@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_22_164151) do
+ActiveRecord::Schema.define(version: 2022_04_25_085344) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,12 +26,29 @@ ActiveRecord::Schema.define(version: 2022_04_22_164151) do
     t.index ["rater_id"], name: "index_average_caches_on_rater_id"
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "movie_categories", force: :cascade do |t|
+    t.bigint "movie_id"
+    t.bigint "category_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_movie_categories_on_category_id"
+    t.index ["movie_id", "category_id"], name: "index_movie_categories_on_movie_id_and_category_id", unique: true
+    t.index ["movie_id"], name: "index_movie_categories_on_movie_id"
+  end
+
   create_table "movies", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "title"
     t.string "description"
-    t.string "category"
+    t.text "category_ids", default: [], array: true
   end
 
   create_table "overall_averages", force: :cascade do |t|
@@ -83,4 +100,6 @@ ActiveRecord::Schema.define(version: 2022_04_22_164151) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "movie_categories", "categories"
+  add_foreign_key "movie_categories", "movies"
 end
