@@ -42,6 +42,8 @@ gem 'jquery-rails', '~> 4.4'
 
 gem 'activeadmin', '~> 2.12'
 
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
+
 
 
 group :development, :test do

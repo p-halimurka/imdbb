@@ -3,7 +3,7 @@ class MoviesController < ApplicationController
 
   def index
     
-    @movies = Movie.all
+    @movies = Movie.page params[:page]
     
     respond_to do | format |
       format.html
