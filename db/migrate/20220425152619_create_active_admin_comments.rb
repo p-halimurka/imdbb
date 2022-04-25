@@ -1,5 +1,10 @@
 class CreateActiveAdminComments < ActiveRecord::Migration[6.1]
-  def self.up
+
+  def change
+    drop_table :active_admin_comments
+  end
+
+  def change
     create_table :active_admin_comments do |t|
       t.string :namespace
       t.text   :body
@@ -8,9 +13,5 @@ class CreateActiveAdminComments < ActiveRecord::Migration[6.1]
       t.timestamps
     end
     add_index :active_admin_comments, [:namespace]
-  end
-
-  def self.down
-    drop_table :active_admin_comments
   end
 end
