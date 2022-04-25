@@ -19,4 +19,10 @@ class MoviesController < ApplicationController
 
   def edit
   end
+
+  private
+
+  def movie_params
+    params.require(:movie).permit(:title, :description, category_ids: [])
+  end
 end

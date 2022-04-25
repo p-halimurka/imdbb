@@ -1,0 +1,5 @@
+<p><%@category.name%></p>
+
+<% @category.movies.each do | movie | %>
+  <%= link_to "#{movie.title}", movie_path(movie.id) %>
+<% end %>

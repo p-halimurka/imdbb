@@ -16,6 +16,9 @@
                     <strong> <%= link_to "#{movie.title}", movie_path(movie) %> </strong> <small>2h 31m </small>
                     <br>
                      <%= movie.description %>
+                     <% movie.categories.each do | category |%>
+                        <%= link_to "#{category.name}", category_path(category) %>
+                      <% end %>
                      <p> Rating: <%= rating_for movie, 'rating_value', star: 10, disable_after_rate: false %></p>
                   </p>
                 </div>
