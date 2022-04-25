@@ -40,6 +40,7 @@ gem 'ratyrate', '~> 1.2.2.alpha'
 
 gem 'jquery-rails', '~> 4.4'
 
+gem 'activeadmin', '~> 2.12'
 
 
 
