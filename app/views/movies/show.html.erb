@@ -1,2 +1,52 @@
-<p> <%= @movie.title%> </p>
-<p> Average: <%= RatingCache.find_by(cacheable_id: @movie.id).nil? ? 0.0 : RatingCache.find_by(cacheable_id: @movie.id).avg %></p>
+<br>
+<br>
+<div class="row"> 
+      <div class="col-1">
+          <span></span>
+      </div>
+
+      <div class="col-6">
+        <h2> <%= @movie.title %> </h2>
+        <p> <small>2h 31m </small> <small> | </small> <small> 2021 </small> </p>
+        
+          <article class="media">
+            <figure class="media-left">
+              <p class="image is-64x64">
+                <img src="https://bulma.io/images/placeholders/128x128.png">
+              </p>
+            </figure>
+            <small> <% @movie.categories.each do | category |%>
+                      <%= link_to "#{category.name}", category_path(category) %>
+                    <% end %>
+            </small>
+            <br>
+            <p> <%= @movie.description %> </p>
+          </article> 
+      </div>
+
+      <div class="col">
+          <p>Your rating <strong> <%= Rate.find_by(rateable_id: @movie.id, rater_id: current_user.id).nil? ? 0.0 : Rate.find_by(rateable_id: @movie.id, rater_id: current_user.id).stars %> </strong> </p>
+      </div>
+
+
+      <div class="col">
+          <p>IMDb rating <strong> <%=  RatingCache.find_by(cacheable_id: @movie.id).nil? ? 0.0 : RatingCache.find_by(cacheable_id: @movie.id).avg %> </strong>/ 10 <%= rating_for @movie, 'rating_value', star: 10, disable_after_rate: false %></p>
+      </div>
+              <% if false %>
+              <% if user_signed_in? %>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary">Left</button>
+                    <button type="button" class="btn btn-primary">Middle</button>
+                    <button type="button" class="btn btn-primary">Right</button>
+                  </div>
+              <% end %>
+              <% end %>
+          
+          <br>
+       </div>
+
+        <div class="col">
+          <span></span>
+      </div>
+      
+    </div>
