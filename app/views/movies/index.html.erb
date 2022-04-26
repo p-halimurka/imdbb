@@ -1,9 +1,33 @@
-<section class ="section">
+<div class="row"> 
+      <div class="col">
+          <span></span>
+          <br>
+          <%= render 'categories_form'%>
+      </div>
+      <div class="col-9">
+        <div class="title-container">
+              <br>
+              <h1>Movies</h1>
+              <br>
+        </div>
+      </div>
+      <div class="col">
+          <span></span>
+      </div>
+</div>
+     
   <div class="container">
-    <div class="columns"> 
-        <%= render 'categories_form'%>
-        <%= render 'movies' %>
-        <%= paginate @movies %>
-    </div>
+      <%= render 'movies' %>
   </div>
-</section>
+  
+  <div class="row"> 
+      <div class="col">
+          <span></span>
+      </div>
+      <div class="col-9">
+        <%= paginate @movies %>
+      </div>
+      <div class="col">
+          <span></span>
+      </div>
+</div>
