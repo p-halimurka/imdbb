@@ -6,10 +6,8 @@
     Category
   </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="categories/1"><%=categories[0].name %></a></li>
-    <li><a class="dropdown-item" href="categories/2"><%=categories[1].name %></a></li>
-    <li><a class="dropdown-item" href="categories/3"><%=categories[2].name %></a></li>
-    <li><a class="dropdown-item" href="categories/4"><%=categories[3].name %></a></li>
-    <li><a class="dropdown-item" href="categories/5"><%=categories[4].name %></a></li>
+    <% categories.each do |category|%>
+      <li> <%= link_to "#{category.name}", category_path(category), class:"dropdown-item" %> </li>
+    <% end %>
   </ul>
 </div>

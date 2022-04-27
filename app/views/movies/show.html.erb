@@ -24,15 +24,15 @@
           </article> 
       </div>
 
+      <% if user_signed_in?%>
       <div class="col">
-        <% if user_signed_in?%>
           <p> Your rating 
           <strong> 
             <%= Rate.find_by(rateable_id: @movie.id, rater_id: current_user.id).nil? ? 0.0 : Rate.find_by(rateable_id: @movie.id, rater_id: current_user.id).stars %> 
            </strong> 
           </p>
-        <% end %>
       </div>
+      <% end %>
 
 
       <div class="col">
