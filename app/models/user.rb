@@ -4,4 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   ratyrate_rater
+  validates_presence_of :name, :username, :email, :password
 end

@@ -46,9 +46,18 @@ gem 'kaminari', '~> 1.2', '>= 1.2.2'
 
 
 
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 5.1', '>= 5.1.2'
+  
+  gem 'faker', '~> 2.20'
+  gem 'factory_bot_rails', '~> 6.2'
+  gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
+  gem 'shoulda', '~> 4.0'
+  gem 'shoulda-callback-matchers', '~> 1.1', '>= 1.1.4'
+  gem 'simplecov', '~> 0.21.2'
 end
 
 group :development do
