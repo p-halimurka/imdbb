@@ -23,3 +23,34 @@
 .navbar-brand {
   margin-left: 55px;
 }
+
+.btn-primary-navbar {
+  color: #261C1C;
+  background-color: #FFD700;
+  border-color: #CD853F;
+  margin-left: 55px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn-primary-navbar:hover {
+  color: #FFD700;
+  background-color: #261C1C;
+  border-color: #FFD700;
+  margin-left: 55px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  color: #FFFFFF;
+  background-color: #434548;
+  border-color: #696767;
+}
+
+.btn-primary:hover {
+  color: #FFFFFF;
+  background-color: #363636;
+  border-color: #FFFFFF;
+}
+
