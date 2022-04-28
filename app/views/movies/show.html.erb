@@ -1,5 +1,9 @@
-<% user_rating =  Rate.find_by(rateable_id: @movie.id, rater_id: current_user.id) %>
-<% average_rating = RatingCache.find_by(cacheable_id: @movie.id) %>
+<% if user_signed_in? %>
+    <% user_rating = Rate.find_by(rateable_id: @movie.id, rater_id: current_user.id) %>
+<% end %>
+
+
+<% average_rating =  RatingCache.find_by(cacheable_id: @movie.id) %>
 
 <br>
 <br>
@@ -39,7 +43,7 @@
 
 
         <div class="col">
-            <p>IMDb rating <strong> <%= average_rating.nil? ? 0.0 : average_rating.avg %> </strong>/ 10 
+            <p>IMDb rating <strong> <%= average_rating.nil?  ? 0.0 : average_rating.avg %> </strong>/ 10 
             <%= rating_for @movie, 'rating_value', star: 10, disable_after_rate: false %>
             </p>
         </div>
