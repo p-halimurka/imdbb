@@ -1917,12 +1917,13 @@
           1,
           null,
           1,
-          1,
+          3,
           null,
           null,
           1,
-          1,
-          1,
+          3,
+          3,
+          3,
           null,
           1,
           null,
@@ -1940,14 +1941,8 @@
           null,
           1,
           null,
-          null,
           1,
           1,
-          1,
-          null,
-          null,
-          null,
-          null,
           1,
           null,
           null,
@@ -1956,6 +1951,22 @@
           1,
           null,
           null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
           null,
           null,
           null,
@@ -1970,18 +1981,19 @@
           null,
           1,
           null,
-          1,
+          5,
+          5,
+          null,
+          5,
+          5,
+          5,
+          5,
+          5,
+          null,
+          null,
           null,
           1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
+          2,
           null,
           null,
           1,
@@ -2147,8 +2159,51 @@
           null,
           null
         ]
+      },
+      "/Users/petro/imdbb/spec/requests/category_get_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/petro/imdbb/spec/requests/movie_get_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/petro/imdbb/spec/requests/movies_get_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/petro/imdbb/app/models/rating_cache.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1651074004
+    "timestamp": 1651142132
   }
 }
