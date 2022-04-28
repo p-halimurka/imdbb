@@ -11,7 +11,7 @@
                 <img src="https://bulma.io/images/placeholders/128x128.png">
               </p>
             </figure>
-            <h4> <%= link_to "#{movie.title}", movie_path(movie) %> </h4> <small>2h 31m</small> 
+            <h5> <%= link_to "#{movie.title}", movie_path(movie) %> </h5> <small>2h 31m</small> 
             <small> | </small>
             <small> <% movie.categories.each do | category |%>
                       <%= link_to "#{category.name}", category_path(category) %>
