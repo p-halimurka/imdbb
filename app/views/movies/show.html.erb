@@ -43,7 +43,7 @@
 
 
         <div class="col">
-            <p>IMDb rating <strong> <%= average_rating.nil?  ? 0.0 : average_rating.avg %> </strong>/ 10 
+            <p>IMDb rating <strong> <%= average_rating.nil?  ? 0.0 : average_rating.avg.round(2) %> </strong>/ 10 
             <%= rating_for @movie, 'rating_value', star: 10, disable_after_rate: false %>
             </p>
         </div>
