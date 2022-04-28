@@ -7,6 +7,7 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @category_movies = @category.movies.page params[:page]
+    @categories = Category.all
   end
   private
 

@@ -1,12 +1,9 @@
-<% categories = Category.all %>
-
-
 <div class="dropdown">
   <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
     Category
   </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <% categories.each do |category|%>
+    <% @categories.each do |category|%>
       <li> <%= link_to "#{category.name}", category_path(category), class:"dropdown-item" %> </li>
     <% end %>
   </ul>

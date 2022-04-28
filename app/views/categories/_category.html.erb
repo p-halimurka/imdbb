@@ -11,7 +11,7 @@
                 <img src="https://bulma.io/images/placeholders/128x128.png">
               </p>
             </figure>
-            <h4> <%= link_to "#{movie.title}", movie_path(movie) %> </h4> <small>2h 31m   </small> 
+            <h4> <%= link_to "#{movie.title}", movie_path(movie) %> </h4> <small>2h 31m</small> 
             <small> | </small>
             <small> <% movie.categories.each do | category |%>
                       <%= link_to "#{category.name}", category_path(category) %>
@@ -19,15 +19,7 @@
             </small>
             <br>
             <p> <%= movie.description %> </p>
-            
             <p> <%= rating_for movie, 'rating_value', star: 10, disable_after_rate: false %></p>
-              <% if user_signed_in? %>
-                  <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-primary">Left</button>
-                    <button type="button" class="btn btn-primary">Middle</button>
-                    <button type="button" class="btn btn-primary">Right</button>
-                  </div>
-              <% end %>
           </article> 
           <br>
        </div>
