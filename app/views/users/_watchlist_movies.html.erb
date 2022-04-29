@@ -5,9 +5,14 @@
       </div>
       <div class="col-9">
         <ul class="list-group list-group-flush">
+        <% if @watchlist_movies.any? %>
           <% @watchlist_movies.each do |movie| %>
             <li class="list-group-item"> <%= link_to "#{movie.title}", movie_path(movie.id) %> <%= link_to("Delete", unwatchlist_movie_path(movie.id), class: "btn btn-outline-danger", method: :delete)%></li>
-          <% end %> 
+          <% end %>
+        <% else %>
+          <p> You haven't added any movie to your watchlist...</p>
+        <% end %>
+
         </ul>
       </div>
       <div class="col">
