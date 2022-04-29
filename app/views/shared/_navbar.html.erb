@@ -10,9 +10,11 @@
           </form>
         <div class="navbar-end" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="/">Watchlist</a>
-            </li>
+            <% if user_signed_in?%>
+              <li class="nav-item">
+                <%= link_to "Watchlist", watchlists_user_path(current_user.id), class: "nav-link" %>
+              </li>
+            <% end %>
             <% if user_signed_in? %>
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="/users/edit"> <%= current_user.username %> </a>

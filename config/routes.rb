@@ -8,7 +8,14 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'     
   end
 
-  resources :movies, only: [:show, :index]
+  resources :movies, only: [:show, :index] do 
+    post :watchlist, on: :member
+    delete :unwatchlist, on: :member
+  end
+
+  resources :users, only:[:show] do
+    get :watchlists, on: :member
+  end
 
   resources :categories, only: [:show, :index]
 

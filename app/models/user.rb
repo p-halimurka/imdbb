@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   ratyrate_rater
   validates_presence_of :name, :username, :email, :password
+  has_many :watchlists
 end
