@@ -21,4 +21,4 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Deployment link : https://hidden-ocean-76970.herokuapp.com 
